@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .login {
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+            width: 300px;
+            margin: 0 auto;
+        } */
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="products.html">Products</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Login</h2>
+        <input id="email" type="email" />
+        <input id="pass" type="password" />
+        <button id="" onclick="handleLogin()" type="submit">Login</button>
+    </main>
+
+
+
+    <script>
+        function handleLogin(e) {
+            // e.preventDefault();
+            const email = document.getElementById('email').value;
+            const pass = document.getElementById('pass').value;
+            console.log(email, pass);
+            const auth = {
+                email: email,
+                pass: pass
+            }
+            localStorage.setItem(email, JSON.stringify(auth));
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
